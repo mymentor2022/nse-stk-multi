@@ -1,0 +1,36 @@
+ssh-keygen -t ed25519 -C "<your email>@gmail.com"
+ls -lrt /root/.ssh/
+cat /root/.ssh/id_ed25519.pub
+Copy the contents to https://github.com/settings/keys
+then login to github using 
+git clone git@github.com:mymentor2022/nse-stk-multi.git
+
+
+[root@ip-10-0-0-20 gitrepo]# cd nse-stk-multi/
+[root@ip-10-0-0-20 nse-stk-multi]# touch README.md 
+[root@ip-10-0-0-20 nse-stk-multi]# git add README.md 
+[root@ip-10-0-0-20 nse-stk-multi]# git commit -m "add readme"
+[main 2d66681] add readme
+ Committer: root <root@ip-10-0-0-20.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+[root@ip-10-0-0-20 nse-stk-multi]# git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mymentor2022/nse-stk-multi.git
+   e4f2994..2d66681  main -> main
