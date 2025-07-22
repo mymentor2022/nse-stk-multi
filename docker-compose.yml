@@ -1,0 +1,33 @@
+version: "3.3"
+
+services:
+  NSEDASH:
+    image: nse-multi:latest
+    volumes:
+      - log_data:/opt/apps/logs
+    ports:
+      - "8050:8050"
+    restart: always
+#    logging:
+#      driver: awslogs
+#      options:
+#        awslogs-region: us-east-1
+#        awslogs-group: test
+#        awslogs-create-group: 'true'
+#        awslogs-datetime-format: '\[%b %d, %Y %H:%M:%S\]'
+    environment:
+      angel_apikey: 
+      angel_username: 
+      angel_passwd: 
+      angel_token: 
+      account_sid: 
+      auth_token: 
+      to_ph: 
+      from_ph: 
+      messaging_service_sid: 
+      content_template_sid: 
+      WATCHLIST_STOCKS: 'DIXON,ULTRACEMCO,MARUTI,BAJAJHLDNG,BAJAJ_AUTO,NAUKRI,COFORGE,ABB,SIEMENS,BAJFINANCE,APOLLOHOSP,TRENT,POLYCAB,LTIM,PERSISTENT,DIVISLAB,EICHERMOT,BRITANNIA,HEROMOTOCO,TCS,HAL,INDIGO,KOTAKBANK,HDFCBANK,ICICIBANK'  # Initialize watchlist
+      PORTFOLIO_STOCKS: 'DIXON'
+volumes:
+  log_data: {}
+
